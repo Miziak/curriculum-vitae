@@ -75,6 +75,14 @@ class CVDocument extends CVComponent {
           grid-row: 1;
         }
 
+        a:link {
+          color: var(--main-color);
+        }
+
+        a:visited {
+          color: var(--main-color);
+        }
+
         cv-section[title="Experience"] {
           grid-column: 1 / span 3;
           grid-row: 2;
@@ -112,7 +120,7 @@ class CVDocument extends CVComponent {
       <main>
         <cv-section title="Important" icon="info">
           This documnent was created in newest web technologies such as HTML5, CSS(css grid e.g.) and JavaScript(some ES6 features and custom elements API).
-          Source code can be found in my GitHub: [tubędzielink]
+          Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
         </cv-section>
         <cv-section title="Experience" icon="work">
           ${data.experience.map(it => `

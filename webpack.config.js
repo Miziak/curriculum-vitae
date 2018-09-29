@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = ({ env, dataFile }) => ({
+module.exports = ({ env, dataFile } = {}) => ({
   mode: env || 'development',
   entry: './src/main.js',
   output: {

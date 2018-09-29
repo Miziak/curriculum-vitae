@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server",
-    "build": "npm run lint && webpack && node convert.js",
+    "build": "npm run lint && webpack --env.env=production && node convert.js",
     "build:real": "npm run lint && webpack --env.env=production --env.dataFile=./myData.json && node convert.js",
     "lint": "eslint ./src/*.js ./src/**/*.js"
   },
