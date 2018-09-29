@@ -1,0 +1,4 @@
+/dist
+/node_modules
+myData.json
+*.pdf

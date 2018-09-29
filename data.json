@@ -1,0 +1,42 @@
+{
+  "personalData": {
+    "name": "John Doe",
+    "position": "Developer",
+    "phone": "111111111",
+    "email": "john@doe.com",
+    "street": "xyz",
+    "city": "xyz"
+  },
+  "experience": [
+    {
+      "company": "Company",
+      "position": "Developer",
+      "time": "01.01.1970 - 01.01.1970",
+      "description": [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis consectetur enim. Suspendisse potenti. Quisque dignissim eros vel urna posuere, sed interdum mauris finibus. Aliquam erat volutpat. Proin convallis at." ]
+    },
+    {
+      "company": "Company",
+      "position": "Developer",
+      "time": "01.01.1970 - 01.01.1970",
+      "description": [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis consectetur enim. Suspendisse potenti. Quisque dignissim eros vel urna posuere, sed interdum mauris finibus. Aliquam erat volutpat. Proin convallis at." ]
+    },
+    {
+      "company": "Company",
+      "position": "Developer",
+      "time": "01.01.1970 - 01.01.1970",
+      "description": [ "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quis consectetur enim. Suspendisse potenti. Quisque dignissim eros vel urna posuere, sed interdum mauris finibus. Aliquam erat volutpat. Proin convallis at." ]
+    }
+  ],
+  "education": [
+    {
+      "university": "University",
+      "title": "Master",
+      "time": "01.01.1970 - 01.01.1970"
+    },
+    {
+      "university": "University",
+      "title": "BA",
+      "time": "01.01.1970 - 01.01.1970"
+    }
+  ]
+}

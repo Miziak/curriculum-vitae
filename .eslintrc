@@ -1,0 +1,16 @@
+{
+  "extends": "airbnb-base",
+  "globals": {
+    "HTMLElement": true,
+    "customElements": true,
+    "fetch": true
+  },
+  "rules": {
+    "class-methods-use-this": [
+      "error",
+      {
+        "exceptMethods": [ "render" ]
+      }
+    ]
+  }
+}

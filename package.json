@@ -1,0 +1,37 @@
+{
+  "name": "curriculum-vitae",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "build": "npm run lint && webpack && node convert.js",
+    "build:real": "npm run lint && webpack --env.env=production --env.dataFile=./myData.json && node convert.js",
+    "lint": "eslint ./src/*.js ./src/**/*.js"
+  },
+  "author": "Paweł Mizio",
+  "license": "ISC",
+  "dependencies": {
+    "hyperhtml": "^2.14.0",
+    "material-design-icons": "^3.0.1",
+    "roboto-fontface": "^0.10.0"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "copy-webpack-plugin": "^4.5.2",
+    "css-loader": "^1.0.0",
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "express": "^4.16.3",
+    "file-loader": "^2.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "puppeteer": "^1.8.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.1",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
