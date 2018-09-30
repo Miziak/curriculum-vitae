@@ -119,7 +119,7 @@ class CVDocument extends CVComponent {
       </header>
       <main>
         <cv-section title="Important" icon="info">
-          This documnent was created in newest web technologies such as HTML5, CSS(css grid e.g.) and JavaScript(some ES6 features and custom elements API).
+          This document was created in the newest web technologies such as HTML5, CSS (e.g. CSS grid) and JavaScript (some of ES6 features and custom elements API).
           Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
         </cv-section>
         <cv-section title="Experience" icon="work">
@@ -146,7 +146,7 @@ class CVDocument extends CVComponent {
         <cv-section title="Languages and Technologies" icon="keyboard">
           <ul>
             <li>
-              JavaScript(ES6 & ES7), HTML5, CSS, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java
+              JavaScript (ES6 & ES7), HTML5, CSS, Sass, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java
             </li>
             <li>
               Visual Studio Code, Git, Linux

@@ -18,7 +18,7 @@ class CVListItem extends CVComponent {
           display: grid;
         }
 
-        .info > div {
+        .info > div:not(:first-child) {
           margin-top: 5px;
         }
 
