@@ -27,10 +27,12 @@ class CVSection extends CVComponent {
           display: flex;
           flex-direction: column;
           justify-content: center;
+          box-sizing: border-box;
           font-size: 16px;
           font-weight: bold;
           border-bottom: 3px solid var(--main-color);
           color: var(--main-color);
+          padding-bottom: 5px;
         }
 
         .content {

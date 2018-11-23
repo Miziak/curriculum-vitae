@@ -70,9 +70,9 @@ class CVDocument extends CVComponent {
           height: 5%;
         }
         
-        cv-section[title="Important"] {
+        cv-section[title="README"] {
           grid-column: 1 / span 3;
-          grid-row: 1;
+          grid-row: 3;
         }
 
         a:link {
@@ -85,16 +85,33 @@ class CVDocument extends CVComponent {
 
         cv-section[title="Experience"] {
           grid-column: 1 / span 3;
-          grid-row: 2;
+          grid-row: 1;
         }
         
         cv-section[title="Education"] {
-          grid-row: 3;
+          grid-row: 2;
         }
 
         cv-section[title="Languages and Technologies"] {
-          grid-column: 2 / span 3;
-          grid-row: 3;
+          grid-column: 2;
+          grid-row: 2;
+        }
+
+        cv-section[title="Interests"] {
+          grid-column: 3;
+          grid-row: 2;
+        }
+
+        cv-section[title="Interests"] ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        cv-section[title="Interests"] li::before {
+          content: "•";
+          padding-right: 5px;
+          color: var(--main-color);
         }
 
         cv-list-item {
@@ -118,10 +135,6 @@ class CVDocument extends CVComponent {
         </div>
       </header>
       <main>
-        <cv-section title="Important" icon="info">
-          This document was created in the newest web technologies such as HTML5, CSS (e.g. CSS grid) and JavaScript (some of ES6 features and custom elements API).
-          Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
-        </cv-section>
         <cv-section title="Experience" icon="work">
           ${data.experience.map(it => `
             <cv-list-item
@@ -133,7 +146,7 @@ class CVDocument extends CVComponent {
             </cv-list-item>
           `)}
         </cv-section>
-        <cv-section title="Education" icon="book">
+        <cv-section title="Education" icon="school">
           ${data.education.map(it => `
             <cv-list-item
               company="${it.university}"
@@ -144,14 +157,20 @@ class CVDocument extends CVComponent {
           `)}
         </cv-section>
         <cv-section title="Languages and Technologies" icon="keyboard">
+          JavaScript (ES6 & ES7), HTML5, CSS, Sass, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java, Visual Studio Code, Git, Linux
+        </cv-section>
+        <cv-section title="Interests" icon="fitness_center">
           <ul>
-            <li>
-              JavaScript (ES6 & ES7), HTML5, CSS, Sass, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java
-            </li>
-            <li>
-              Visual Studio Code, Git, Linux
-            </li>
+            <li>Programming</li>
+            <li>Physics, Astrophysics</li>
+            <li>Electronics</li>
+            <li>Video games</li>
+            <li>Religions of the World</li>
           </ul>
+        </cv-section>
+        <cv-section title="README" icon="info">
+          This document was created in the newest web technologies such as HTML5, CSS (e.g. CSS grid) and JavaScript (some of ES6 features and custom elements API).
+          Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
         </cv-section>
       </main>
       <footer class="text--vcenter">
