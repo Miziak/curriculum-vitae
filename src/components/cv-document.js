@@ -7,8 +7,6 @@ class CVDocument extends CVComponent {
       <style>
         :host {
           display: block;
-          height: 297mm;
-          width: 210mm;
           --main-color: #6293a5;
         }
 
@@ -61,14 +59,6 @@ class CVDocument extends CVComponent {
           height: 75%;
           padding: 0.5cm;
         }
-
-        footer {
-          overflow: hidden;
-          text-align: center;
-          font-size: 12px;
-          color: #666;
-          height: 5%;
-        }
         
         cv-section[title="README"] {
           grid-column: 1 / span 3;
@@ -118,67 +108,63 @@ class CVDocument extends CVComponent {
           margin-top: 10px;
         }
       </style>
-      <header>
-        <div class="name text--vcenter">
-          ${data.personalData.name}
-        </div>
-        <div class="position">
-          ${data.personalData.position}
-        </div>
-        <div class="contact">
-          <ul>
-            <li>${data.personalData.phone}</li>
-            <li>${data.personalData.email}</li>
-            <li>${data.personalData.street}</li>
-            <li>${data.personalData.city}</li>
-          </ul>
-        </div>
-      </header>
-      <main>
-        <cv-section title="Experience" icon="work">
-          ${data.experience.map(it => `
-            <cv-list-item
-              company="${it.company}"
-              position="${it.position}"
-              time="${it.time}"
-            >
-              ${it.description.join('\n')}
-            </cv-list-item>
-          `)}
-        </cv-section>
-        <cv-section title="Education" icon="school">
-          ${data.education.map(it => `
-            <cv-list-item
-              company="${it.university}"
-              position="${it.title}"
-              time="${it.time}"
-              nocontent
-            ></cv-list-item>
-          `)}
-        </cv-section>
-        <cv-section title="Languages and Technologies" icon="keyboard">
-          JavaScript (ES6 & ES7), HTML5, CSS, Sass, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java, Visual Studio Code, Git, Linux
-        </cv-section>
-        <cv-section title="Interests" icon="fitness_center">
-          <ul>
-            <li>Programming</li>
-            <li>Physics, Astrophysics</li>
-            <li>Electronics</li>
-            <li>Video games</li>
-            <li>Religions of the World</li>
-          </ul>
-        </cv-section>
-        <cv-section title="README" icon="info">
-          This document was created in the newest web technologies such as HTML5, CSS (e.g. CSS grid) and JavaScript (some of ES6 features and custom elements API).
-          Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
-        </cv-section>
-      </main>
-      <footer class="text--vcenter">
-          I hereby give consent for my personal data included in my application to be processed for the
-          purposes of the recruitment process under the Regulation (EU) 2016/679 of the European Parliament
-          and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing
-          of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).
-      </footer>
+      <cv-page>
+        <header>
+          <div class="name text--vcenter">
+            ${data.personalData.name}
+          </div>
+          <div class="position">
+            ${data.personalData.position}
+          </div>
+          <div class="contact">
+            <ul>
+              <li>${data.personalData.phone}</li>
+              <li>${data.personalData.email}</li>
+              <li>${data.personalData.street}</li>
+              <li>${data.personalData.city}</li>
+            </ul>
+          </div>
+        </header>
+        <main>
+          <cv-section title="Experience" icon="work">
+            ${data.experience.map(it => `
+              <cv-list-item
+                company="${it.company}"
+                position="${it.position}"
+                time="${it.time}"
+              >
+                ${it.description.join('\n')}
+              </cv-list-item>
+            `)}
+          </cv-section>
+          <cv-section title="Education" icon="school">
+            ${data.education.map(it => `
+              <cv-list-item
+                company="${it.university}"
+                position="${it.title}"
+                time="${it.time}"
+                nocontent
+              ></cv-list-item>
+            `)}
+          </cv-section>
+          <cv-section title="Languages and Technologies" icon="keyboard">
+            JavaScript (ES6 & ES7), HTML5, CSS, Sass, React, FlowType, TypeScript, Webpack, ESLint, Angular, Bootstrap, Node.js, Java, Visual Studio Code, Git, Linux
+          </cv-section>
+          <cv-section title="Interests" icon="fitness_center">
+            <ul>
+              <li>Programming</li>
+              <li>Physics, Astrophysics</li>
+              <li>Electronics</li>
+              <li>Video games</li>
+              <li>Religions of the World</li>
+            </ul>
+          </cv-section>
+          <cv-section title="README" icon="info">
+            This document was created in web technologies such as HTML5, CSS (e.g. CSS grid) and JavaScript (some of ES6 features and custom elements API).
+            Source code can be found in my GitHub: <a href="https://github.com/Miziak/curriculum-vitae">https://github.com/Miziak/curriculum-vitae</a>
+          </cv-section>
+        </main>
+      </cv-page>
     `;
   }
 }
